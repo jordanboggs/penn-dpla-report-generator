@@ -1,5 +1,4 @@
 const fs       = require('fs');
-// const readline = require('readline');
 const axios    = require('axios');
 
 // Read search term from a line in input.txt
@@ -31,13 +30,16 @@ function search(searchTerm) {
 
 // Output the following fields: search term, id, ingest date, data provider
 function formatResponse(searchTerm, res) {
-  // console.log(searchTerm);
-  // console.log(res.data.docs);
   let docs = res.data.docs;
   docs.forEach((doc) => {
     let id = doc.id;
     let ingestDate = doc.ingestDate;
     let dataProvider = doc.provider.name;
-    console.log(searchTerm, id, ingestDate, dataProvider);
+    
+    // Write line to file
+    let writeData = `${searchTerm} ${id} ${ingestDate} ${dataProvider}\r\n`
+    fs.appendFileSync('output.txt', writeData, (err) => {
+      console.error(err);
+    });
   })
 }
