@@ -35,7 +35,9 @@ function formatResponse(searchTerm, res) {
   // console.log(res.data.docs);
   let docs = res.data.docs;
   docs.forEach((doc) => {
-    let id = doc._id;
-    console.log(id);
+    let id = doc.id;
+    let ingestDate = doc.ingestDate;
+    let dataProvider = doc.provider.name;
+    console.log(searchTerm, id, ingestDate, dataProvider);
   })
 }
