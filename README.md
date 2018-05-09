@@ -15,5 +15,5 @@ to install dependencies.
 
 ## Running Penn DPLA Report Generator
 After installing Node, NPM, and dependencies, run
-```npm generate.js```
+```node generate.js```
 Next, check output.txt for the generated report.
