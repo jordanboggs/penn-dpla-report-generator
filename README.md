@@ -9,11 +9,7 @@ This app requires Node.js. I used version 9.9.0, but more more recent versions s
 This app also requires NPM, which is installed when you install Node.
 
 ## Installation
-In a command line, run 
-```npm install```
-to install dependencies.
+In a command line, run ```npm install``` to install dependencies.
 
 ## Running Penn DPLA Report Generator
-After installing Node, NPM, and dependencies, run
-```node generate.js```
-Next, check output.txt for the generated report.
+After installing Node, NPM, and dependencies, run ```node generate.js```. Next, check output.txt for the generated report.
